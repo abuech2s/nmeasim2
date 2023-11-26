@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+	<ADSB>
+		<Airplanes>
+			<Airplane repeatTrack="true">
+				<Positions>
+					<Pos lat="" lon=""/>
+					<Pos lat="" lon=""/>
+					<Pos lat="" lon=""/>
+					<Pos lat="" lon=""/>
+					<Pos lat="" lon=""/>
+				</Positions>
+			</Airplane>
+			<!-- Multiple airplanes -->
+		</Airplanes>
+	</ADSB>
+	<AIS>
+		<Vessels>
+			<Vessel repeatTrack="true" mmsi="" name="" callsign="" destination="" draught="">
+				<Positions>
+					<Pos lat="" lon=""/>
+					<Pos lat="" lon=""/>
+					<Pos lat="" lon=""/>
+					<Pos lat="" lon=""/>
+					<Pos lat="" lon=""/>
+				</Positions>
+			</Vessel>
+			<!-- Multiple vessels -->
+		</Vessels>
+	</AIS>
+	<GPS>
+		<Vessel repeatTrack="true">
+			<Positions>
+				<Pos lat="" lon=""/>
+				<Pos lat="" lon=""/>
+				<Pos lat="" lon=""/>
+				<Pos lat="" lon=""/>
+				<Pos lat="" lon=""/>
+			</Positions>
+		</Vessel>
+	</GPS>
+</scenario>

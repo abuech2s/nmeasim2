@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Help:
+sink - equals to a sink type. Possible values: tcp, udp
+active - is the flag, to decide, if this stream is active or not. Possible values: true, false.
+ip - is used in case of sink=udp and is the target address.
+port - is the TCP-Socket-Port or in case of sink=udp the target port.
+nroftracks - equals to the number of generated tracks.
+sleeptime - is the length of the time break, when an AIS route is reinitialized again.
+-->
+
+<AppConfig>
+	<General>
+		<ConfigReloadTime>15</ConfigReloadTime> <!-- in [s] -->
+		<ActivateDataLogging>true</ActivateDataLogging>
+	</General>
+	<DataStreams>
+		<Config type="ADSB" sink="tcp" active="true" ip="" port="10300" nroftrack="1" sleeptime="600000"/>
+		<Config type="AIS" sink="tcp" active="true" ip="" port="10200" nroftrack="1" sleeptime="600000"/>
+		<Config type="RADAR" sink="tcp" active="true" ip="" port="10400"/>
+		<Config type="GPS" sink="tcp" active="true" ip="" port="10500"/>
+		<Config type="WEATHER" sink="tcp" active="false" ip="" port="10600"/>
+		<Config type="COURSE" sink="tcp" active="false" ip="" port="10700"/>
+	</DataStreams>
+</AppConfig>
