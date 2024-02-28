@@ -2,6 +2,7 @@ package simulator.util.datagenerators;
 
 import lombok.Setter;
 import simulator.config.Constants;
+import simulator.model.tracks.TrackAdministration;
 
 public class HexIdentGenerator {
 	
@@ -10,10 +11,16 @@ public class HexIdentGenerator {
 	private static int maxCount = Constants.airplaneHexIdentMax;
 
 	public synchronized static String next() {
-		counter++;
-		int hexIdent = (counter + initTrackId) % maxCount;
-		if (counter > maxCount) counter = -initTrackId;
-		return "HEX" + String.format("%03d", hexIdent);
+		int hexIdent;
+		do {
+			counter++;
+			hexIdent = (counter + initTrackId) % maxCount;
+			if (counter > maxCount) counter = -initTrackId;
+		} while (TrackAdministration.alreadyExists(format(hexIdent)));
+		return format(hexIdent);
 	}
 	
+	private static String format(int hexIdent) {
+		return "HEX" + String.format("%03d", hexIdent);
+	}
 }

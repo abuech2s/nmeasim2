@@ -148,5 +148,10 @@ public class GPSSource extends AbstractSource {
 		if (lon1 > lon2)
 			factorLon = -factorLon;
 	}
+	
+	@Override
+	public boolean containsName(String id) {
+		return true;
+	}
 
 }

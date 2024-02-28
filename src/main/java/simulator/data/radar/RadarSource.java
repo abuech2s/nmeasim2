@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.slf4j.Logger;
@@ -117,6 +118,14 @@ public class RadarSource extends AbstractSource {
 	public void init() {
 		messagePublishTimeInterval = ThreadLocalRandom.current().nextInt(Constants.radarMessagePublishTimeIntervalMin, Constants.radarMessagePublishTimeIntervalMax);
 		log.info("radar device created.");
+	}
+	
+	@Override
+	public boolean containsName(String id) {
+		for (Entry<String, RadarContact> rc : contacts.entrySet()) {
+			if (String.valueOf(rc.getValue().getRadarTrackId()).equalsIgnoreCase(id)) return true;
+		}
+		return false;
 	}
 
 }

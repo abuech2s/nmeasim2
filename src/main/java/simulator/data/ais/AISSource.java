@@ -128,5 +128,11 @@ public class AISSource extends AISAbstractSource {
 		
 		eta = new ETA(waypoints.get(currentWayPointIndex).getGeoCoordinate(), waypoints.get(waypoints.size()-1).getGeoCoordinate(), speed);
 	}
+	
+	@Override
+	public boolean containsName(String id) {
+		if (mmsi.equalsIgnoreCase(id)) return true;
+		return false;
+	}
 
 }

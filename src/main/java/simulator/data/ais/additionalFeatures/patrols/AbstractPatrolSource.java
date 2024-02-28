@@ -123,4 +123,10 @@ public abstract class AbstractPatrolSource extends AISAbstractSource {
 		eta = new ETA(waypoints.get(currentWayPointIndex), waypoints.get(waypoints.size()-1), speed);
 	}
 	
+	@Override
+	public boolean containsName(String id) {
+		if (mmsi.equalsIgnoreCase(id)) return true;
+		return false;
+	}
+	
 }

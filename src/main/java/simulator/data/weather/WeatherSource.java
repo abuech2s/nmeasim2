@@ -81,4 +81,9 @@ public class WeatherSource extends AbstractSource {
 		log.info("course device created.");
 	}
 	
+	@Override
+	public boolean containsName(String id) {
+		return true;
+	}
+	
 }

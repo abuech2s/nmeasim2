@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import simulator.config.model.AppConfig;
+import simulator.model.source.ISource;
 
 public class TrackAdministration {
 
@@ -56,6 +57,32 @@ public class TrackAdministration {
 			}
 		}
 		return null;
+	}
+	
+	public static boolean alreadyExists(String id) {
+		if (tracks == null) return false;
+		for (ITrack track : tracks) {
+			for (ISource source : track.getSources()) {
+				if (source.containsName(id)) {
+					log.info("Already existing:" + id);
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	public static void printExisitingIds(String token) {
+		String s = "";
+		if (tracks == null) return;
+		for (ITrack track : tracks) {
+			if (track.getToken().equalsIgnoreCase(token)) {
+				for (ISource source : track.getSources()) {
+					s += " " + source.toString();
+				}
+			}
+		}
+		log.info(token + " : " + s);
 	}
 	
 }

@@ -130,11 +130,22 @@ public class AirplanesOverBalticSeaSource extends AbstractSource {
 		stepAngle = 360.0 / nrOfPoints;
 		log.info("StepAngle = " + stepAngle);
 		
-		log.info("Airplane created: #{} at ({},{}) dist={}m, time={}s, points={}", hexIdent.length, startingPosition.getLatitude(), startingPosition.getLongitude(), (int)totalDistance, (int)totalTime, nrOfPoints);
+		log.info("In total {} airplanes ({}) created: #{} at ({},{}) dist={}m, time={}s, points={}", maxx * maxy, toString(), hexIdent.length, startingPosition.getLatitude(), startingPosition.getLongitude(), (int)totalDistance, (int)totalTime, nrOfPoints);
 	}
 	
 	@Override
 	public String toString() {
-		return hexIdent[0]+"...";
+		if (hexIdent == null) return "";
+		return hexIdent[0] + " ... " + hexIdent[hexIdent.length-1];
+	}
+	
+	@Override
+	public boolean containsName(String id) {
+		if (hexIdent == null) return false;
+		for (int i = 0; i < hexIdent.length; i++) {
+			if (hexIdent[i] == null) return false;
+			if (hexIdent[i].equalsIgnoreCase(id)) return true;
+		}
+		return false;
 	}
 }

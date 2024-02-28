@@ -115,6 +115,10 @@ where
 
 ## Changelog
 
+2024-02-28 : V2.0.1
+
+- Fix of duplicated identifying tokens
+
 2023-11-26 : V2.0.0
 
 - Reduce memory usage while having 500+ objects
@@ -127,62 +131,6 @@ where
 - Update of dependencies: JUnit to 5.10.1, Logback to 1.3.6, maven-jar-plugin to 3.3.0, mvn-compiler-plugin to 3.11.0, Slf4J to 2.0.6
 
 
-2022-01-16 : V1.0.10
-
-- fix bug of descarding messages based on too small queue size
-- Recommended version of Maven is now 3.8.4
-- Update Logback to 1.2.10 (Log4Shell fixes)
-- Update maven-jar-plugin to 3.2.2
-- Update maven-compiler-plugin 3.9.0
-
-2021-10-09 : V1.0.9
-
-- Add sleeptime for AIS streams
-- Adapt printing stream information
-- Refactoring of radar track messages
-- Integrate version information in jar file
-- Recommended version of Maven is now 3.8.2
-- Add some unit tests
-- Add speed and course for radar tracks
-
-2021-08-21 : V1.0.8
-
-- Make simulator compatible with OpenJDK 11
-
-2021-07-28 : V1.0.7
-
-- Add navStatus, course and trueHeading for AIS-Message 1
-- Add posFixType for AIS-Message 5
-- Add some unit tests
-
-2021-07-11 : V1.0.6
-
-- Add ETA for AIS tracks
-- Fix bug, where \r\n at udp packages is missing
-- Fix bug, where the checksum is missing at GPHDT messages
-- Update dependencies
-
-2021-03-13 : V1.0.5
-- Add more ships
-- Fix wrong timezone in timestamp of gps and radar
-- Fix bug of wrong ais callsign
-- Fix bug of missing ais ship name
-
-2021-02-15 : V1.0.4
-- Add course information (Gphdt and Hehdt)
-
-2020-11-17 : V1.0.3
-- Add course, speed and gphdt message for GPS
-
-2021-11-14 : V1.0.2
-- Optimization of radar plots
-
-2021-02-15 : V1.0.1
-- Add course information (Gphdt and Hehdt)
-
-2020-10-27 : V1.0
- - Initial version
-
 ## CopyRight
 
-(c) Alexander Buechel, abuech2s@gmail.com, February 2023
+(c) Alexander Buechel, abuech2s@gmail.com, November 2023

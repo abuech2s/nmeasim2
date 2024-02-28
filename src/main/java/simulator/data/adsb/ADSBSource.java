@@ -124,4 +124,11 @@ public class ADSBSource extends AbstractSource {
 	public String toString() {
 		return hexIdent;
 	}
+	
+	@Override
+	public boolean containsName(String id) {
+		if (hexIdent == null) return false;
+		if (hexIdent.equalsIgnoreCase(id)) return true;
+		return false;
+	}
 }
