@@ -61,7 +61,7 @@ public class Constants {
 	//ADSB parameters
 	public static final double airplaneSpeed = 250.0; // in [m/s]
 	public static final int airplaneHexIdentMin = 0;
-	public static final int airplaneHexIdentMax = 50;
+	public static final int airplaneHexIdentMax = 999;
 	
 	//GPS parameter
 	public static final double gpsSpeed = 30.0; // in[m/s]
