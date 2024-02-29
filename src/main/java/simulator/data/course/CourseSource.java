@@ -70,6 +70,10 @@ public class CourseSource extends AbstractSource {
 	
 	@Override
 	public boolean containsName(String id) {
+		return !isRunning();
+	}
+	
+	public boolean isRunning() {
 		return true;
 	}
 	

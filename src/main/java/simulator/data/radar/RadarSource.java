@@ -120,6 +120,10 @@ public class RadarSource extends AbstractSource {
 		log.info("radar device created.");
 	}
 	
+	public boolean isRunning() {
+		return true;
+	}
+	
 	@Override
 	public boolean containsName(String id) {
 		for (Entry<String, RadarContact> rc : contacts.entrySet()) {

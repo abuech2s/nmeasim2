@@ -139,9 +139,16 @@ public class AirplanesOverBalticSeaSource extends AbstractSource {
 		return hexIdent[0] + " ... " + hexIdent[hexIdent.length-1];
 	}
 	
+	public boolean isRunning() {
+		if (hexIdent == null) {
+			return false;
+		}
+		return true;
+	}
+	
 	@Override
 	public boolean containsName(String id) {
-		if (hexIdent == null) return false;
+		if (!isRunning()) return false;
 		for (int i = 0; i < hexIdent.length; i++) {
 			if (hexIdent[i] == null) return false;
 			if (hexIdent[i].equalsIgnoreCase(id)) return true;

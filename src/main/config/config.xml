@@ -18,18 +18,18 @@ offset - use this offset for setting individual track id cycles
 		<ActivateDataLogging>false</ActivateDataLogging>
 	</General>
 	<AdditionalFeatures>
-		<AirplanesOverBalticSea>true</AirplanesOverBalticSea>
+		<AirplanesOverBalticSea>false</AirplanesOverBalticSea>
 		<PatrolVessels>true</PatrolVessels>
 		<FishingVessels>true</FishingVessels>
 		<FerryVessels>false</FerryVessels><!-- not yet implemented -->
 	</AdditionalFeatures>
 	<DataStreams>
-		<Config type="ADSB" sink="tcp" active="false" ip="" port="10300" nroftrack="5" sleeptime="600000" initTrackId="500" />
-		<Config type="AIS" sink="tcp" active="true" ip="" port="10200" nroftrack="50" sleeptime="600000" initTrackId="500"/>
+		<Config type="ADSB" sink="tcp" active="true" ip="" port="10300" nroftrack="2" sleeptime="600000" initTrackId="500" />
+		<Config type="AIS" sink="tcp" active="true" ip="" port="10200" nroftrack="1" sleeptime="600000" initTrackId="500"/>
 		<Config type="RADAR" sink="tcp" active="true" ip="" port="10400" radius="20000"/>
 		<Config type="GPS" sink="tcp" active="true" ip="" port="10500"/>
-		<Config type="WEATHER" sink="tcp" active="false" ip="" port="10600"/>
-		<Config type="COURSE" sink="tcp" active="false" ip="" port="10700"/>
+		<Config type="WEATHER" sink="tcp" active="true" ip="" port="10600"/>
+		<Config type="COURSE" sink="tcp" active="true" ip="" port="10700"/>
 		<!--<Config type="DF550" sink="tcp" active="false" ip="" port="10800"/>-->
 	</DataStreams>
 </AppConfig>

@@ -125,6 +125,7 @@ public abstract class AbstractFishersSource extends AISAbstractSource {
 	
 	@Override
 	public boolean containsName(String id) {
+		if (!isRunning()) return false;
 		if (mmsi.equalsIgnoreCase(id)) return true;
 		return false;
 	}

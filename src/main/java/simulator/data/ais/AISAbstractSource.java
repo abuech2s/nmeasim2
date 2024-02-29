@@ -33,4 +33,11 @@ public abstract class AISAbstractSource extends AbstractSource {
 	
 	protected int currentWayPointIndex;
 	
+	public boolean isRunning() {
+		if (mmsi == null) {
+			return false;
+		}
+		return true;
+	}
+	
 }

@@ -10,4 +10,5 @@ public interface ISource extends Runnable {
 	public ISource setTrack(ITrack track);
 	public GeoCoordinate getCurrentPosition();
 	public boolean containsName(String id);
+	public boolean isRunning();
 }

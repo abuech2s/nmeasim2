@@ -81,9 +81,13 @@ public class WeatherSource extends AbstractSource {
 		log.info("course device created.");
 	}
 	
+	public boolean isRunning() {
+		return true;
+	}
+	
 	@Override
 	public boolean containsName(String id) {
-		return true;
+		return !isRunning();
 	}
 	
 }

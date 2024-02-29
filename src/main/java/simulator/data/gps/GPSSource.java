@@ -149,9 +149,13 @@ public class GPSSource extends AbstractSource {
 			factorLon = -factorLon;
 	}
 	
+	public boolean isRunning() {
+		return true;
+	}
+	
 	@Override
 	public boolean containsName(String id) {
-		return true;
+		return !isRunning();
 	}
 
 }

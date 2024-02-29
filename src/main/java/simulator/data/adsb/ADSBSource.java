@@ -125,9 +125,16 @@ public class ADSBSource extends AbstractSource {
 		return hexIdent;
 	}
 	
+	public boolean isRunning() {
+		if (hexIdent == null) {
+			return false;
+		}
+		return true;
+	}
+	
 	@Override
 	public boolean containsName(String id) {
-		if (hexIdent == null) return false;
+		if (!isRunning()) return false;
 		if (hexIdent.equalsIgnoreCase(id)) return true;
 		return false;
 	}
