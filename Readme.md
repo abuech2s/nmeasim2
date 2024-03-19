@@ -117,6 +117,7 @@ where
 
 2024-03-19 : V2.0.2-SNAPSHOT
 
+- Fixed: Missing xml tag <Mode> should make a clean shutdown
 - AIS: Set value to destination field at additional ships
 - AIS: Add additional vessels: Ferry vessels
 
