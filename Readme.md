@@ -120,6 +120,7 @@ where
 - Fixed: Missing xml tag <Mode> should make a clean shutdown
 - AIS: Set value to destination field at additional ships
 - AIS: Add additional vessels: Ferry vessels
+- Update of dependencies: Logback to 1.3.14, Slf4J to 2.0.12, Junit 5.10.2
 
 2024-02-28 : V2.0.1
 
