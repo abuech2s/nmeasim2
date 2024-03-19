@@ -46,7 +46,7 @@ public abstract class AbstractPatrolSource extends AISAbstractSource {
 			String msgType1 = AISEncoder.getBinaryStringMsg1(Integer.parseInt(mmsi), currentPosition.getLatitude(), currentPosition.getLongitude(), speed, course, trueHeading, navStatus);
 			List<String> msgs1 = AISEncoder.getFinalAISMessages(msgType1);
 			
-			String binMsg5 = AISEncoder.getBinaryStringMsg5(Integer.parseInt(mmsi), vessel, eta, "", posFixType);
+			String binMsg5 = AISEncoder.getBinaryStringMsg5(Integer.parseInt(mmsi), vessel, eta, "Sea", posFixType);
 			List<String> msgs5 = AISEncoder.getFinalAISMessages(binMsg5);
 
 			getTrack().publish(msgs1);
