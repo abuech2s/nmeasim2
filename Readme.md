@@ -8,7 +8,7 @@ This means, numerical they should be all correct; semantically there might be no
 ## Recommended Requirements
 
  - Java 8
- - Maven 3.9.5
+ - Maven 3.9.6
  
 These version are always recommended; no guarantee, that older versions are compatible.
 
@@ -115,9 +115,14 @@ where
 
 ## Changelog
 
+2024-03-19 : V2.0.2-SNAPSHOT
+
+- Set destination at additional ships (AIS)
+
 2024-02-28 : V2.0.1
 
-- Fix of duplicated identifying tokens
+- Fix of duplicated identifying tokens (ADSB/AIS)
+
 
 2023-11-26 : V2.0.0
 
@@ -133,4 +138,4 @@ where
 
 ## CopyRight
 
-(c) Alexander Buechel, abuech2s@gmail.com, November 2023
+(c) Alexander Buechel, abuech2s@gmail.com, March 2024
