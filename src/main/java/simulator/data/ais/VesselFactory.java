@@ -17,4 +17,8 @@ public class VesselFactory {
 		return new Vessel(IMOGenerator.next(), CallSignGenerator.next(), vesselName, 4, 3, 3, 5, 7, 30);
 	}
 	
+	public static IVessel createFerryVessel(String vesselName) {
+		return new Vessel(IMOGenerator.next(), CallSignGenerator.next(), vesselName, 6, 4, 4, 6, 8, 60);
+	}
+	
 }

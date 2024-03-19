@@ -117,12 +117,12 @@ where
 
 2024-03-19 : V2.0.2-SNAPSHOT
 
-- Set destination at additional ships (AIS)
+- AIS: Set value to destination field at additional ships
+- AIS: Add additional vessels: Ferry vessels
 
 2024-02-28 : V2.0.1
 
-- Fix of duplicated identifying tokens (ADSB/AIS)
-
+- ADSB/AIS: Fix of duplicated identifying tokens
 
 2023-11-26 : V2.0.0
 

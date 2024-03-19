@@ -12,6 +12,7 @@ import simulator.config.model.Config;
 import simulator.data.adsb.ADSBSourceFactory;
 import simulator.data.adsb.additionalFeatures.AirplanesOverBalticSea.AirplanesOverBalticSeaSourceFactory;
 import simulator.data.ais.AISSourceFactory;
+import simulator.data.ais.additionalFeatures.ferries.FerriesSourceFactory;
 import simulator.data.ais.additionalFeatures.fishers.FishersSourceFactory;
 import simulator.data.ais.additionalFeatures.patrols.PatrolSourceFactory;
 import simulator.data.course.CourseSourceFactory;
@@ -50,6 +51,7 @@ public class LoaderFromSimulator {
 					track.initSources(config.getNroftrack());
 					if (appConfig.getAdditionalFeatures().isPatrolVessels()) track.addAdditionalFeatureSources(new PatrolSourceFactory());
 					if (appConfig.getAdditionalFeatures().isFishingVessels()) track.addAdditionalFeatureSources(new FishersSourceFactory());
+					if (appConfig.getAdditionalFeatures().isFerryVessels()) track.addAdditionalFeatureSources(new FerriesSourceFactory());
 					tracks.add(track);
 				}
 				Constants.DEFAULT_TRACK_SLEEP_TIME = config.getSleepTime();
