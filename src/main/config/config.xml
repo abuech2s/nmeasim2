@@ -12,16 +12,16 @@ offset - use this offset for setting individual track id cycles
 -->
 
 <AppConfig>
-	<Mode>Generator</Mode> <!-- Generator(Default) or File -->
+	<Mode>Generator</Mode> <!-- Generator(Default) -->
 	<General>
 		<ConfigReloadTime>15</ConfigReloadTime> <!-- in [s] -->
 		<ActivateDataLogging>false</ActivateDataLogging>
 	</General>
 	<AdditionalFeatures>
 		<AirplanesOverBalticSea>false</AirplanesOverBalticSea>
-		<PatrolVessels>true</PatrolVessels>
-		<FishingVessels>true</FishingVessels>
-		<FerryVessels>false</FerryVessels><!-- not yet implemented -->
+		<PatrolVessels>false</PatrolVessels>
+		<FishingVessels>false</FishingVessels>
+		<FerryVessels>true</FerryVessels>
 	</AdditionalFeatures>
 	<DataStreams>
 		<Config type="ADSB" sink="tcp" active="true" ip="" port="10300" nroftrack="2" sleeptime="600000" initTrackId="500" />

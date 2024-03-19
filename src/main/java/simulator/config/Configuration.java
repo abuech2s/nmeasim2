@@ -60,7 +60,9 @@ public class Configuration implements Runnable {
 			        Logging.reinit(appConfig);
 			        lastChecksum = currentChecksum;
 		        } else {
-		        	//Mode = Mode.FILE
+		        	log.error("Was not able to start simulator with mode = " + appConfig.getMode() + ". XML-Tag <Mode> is missing in config file.");
+		        	System.exit(-1);
+		        	//TODO: Mode = Mode.FILE
 		        }
 			}
 		} catch (IOException e) {
